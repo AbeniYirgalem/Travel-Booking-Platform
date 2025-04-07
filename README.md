@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Rebel Rover Travel Booking Platform
 
 **Rebel Rover** is a modern, responsive travel booking platform built with **React**, **Tailwind CSS**, and **MockAPI integration**. Designed for a seamless user experience, it allows users to explore travel destinations, book tours, and engage with client testimonials.
@@ -20,3 +21,6 @@
 - **Routing**: React Router
 - **API**: MockAPI.io
 - **Icons**: Heroicons, React Icons
+=======
+# Travel-Booking-Platform
+>>>>>>> 471f70bc82757053b2c9b34dfbe68dc104fef89f
