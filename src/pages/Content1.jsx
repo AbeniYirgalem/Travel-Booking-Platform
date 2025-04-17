@@ -7,7 +7,7 @@ const images = [
     alt: 'Travelers',
   },
   {
-    src: '/image/unsplash_sELcHR_bGVs.png',
+    src: '/image/Group 44.png',
     alt: 'Bali, Indonesia',
   },
   {
@@ -78,14 +78,14 @@ const Content1 = () => {
           {images.map((img, idx) => (
             <div
               key={idx}
-              className={`min-w-[300px] relative bg-white rounded-xl overflow-hidden flex-shrink-0 ${
-                idx === 1 ? 'shadow-lg' : ''
-              }`}
+              className={`min-w-[300px] relative bg-white rounded-xl overflow-hidden flex-shrink-0 `}
             >
               <img
                 src={img.src}
                 alt={img.alt}
-                className="w-full h-72 object-cover rounded-xl"
+                className={`w-full h-72 object-cover rounded-xl ${
+                  idx === 1 ? 'h-100 w-full shadow-xl' : ''
+                }`}
               />
               {/* Optional quote section */}
               {img.quote && (

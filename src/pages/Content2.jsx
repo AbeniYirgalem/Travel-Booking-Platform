@@ -1,8 +1,5 @@
 import React, { useRef } from "react";
-import {
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "@heroicons/react/20/solid";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/20/solid";
 
 const Content2 = () => {
   const scrollRef = useRef(null);
@@ -23,8 +20,7 @@ const Content2 = () => {
     <div
       className="relative bg-cover bg-center min-h-[500px] flex items-center justify-center"
       style={{
-        backgroundImage:
-          "url('/image/unsplash_okVXy9tG3KY.png')",
+        backgroundImage: "url('/image/unsplash_okVXy9tG3KY.png')",
       }}
     >
       {/* Overlay */}
@@ -87,9 +83,7 @@ const Content2 = () => {
 };
 
 const Card = ({ icon, title, text }) => (
-  <div
-    className="min-w-[280px] md:min-w-0 bg-white rounded-2xl p-6 text-left shadow-xl hover:shadow-2xl transition duration-300 -ml-1/4"
-  >
+  <div className="min-w-[280px] md:min-w-0 bg-white rounded-2xl p-6 text-left shadow-xl hover:shadow-2xl transition duration-300 -ml-1/4">
     {/* The -ml-1/4 will shift the cards by 25% outside the container */}
     <div className="mb-4 flex items-start justify-start bg-black p-4 rounded-xl w-14 h-14 ">
       <img src={icon} alt={`${title} Icon`} className="w-6 h-6" />

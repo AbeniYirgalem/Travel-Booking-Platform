@@ -3,6 +3,7 @@ import { useState } from "react";
 
 const HeroSection = () => {
   const [date, setDate] = useState("");
+  const [people, setPeople] = useState(""); // State for "People" input
   const [showDatePicker, setShowDatePicker] = useState(false);
 
   const handleDateChange = (e) => {
@@ -25,7 +26,7 @@ const HeroSection = () => {
     >
       <div className="absolute inset-0 bg-opacity-30"></div>
       <div className="relative text-left text-white px-4 md:px-10">
-        <h1 className="text-4xl md:text-8xl  mt-45 font-bold">
+        <h1 className="text-4xl md:text-8xl mt-45 font-bold">
           Make in <br /> your journey.
         </h1>
         <p className="mt-15 text-lg md:text-xl max-w-2xl mx-auto">
@@ -49,21 +50,20 @@ const HeroSection = () => {
                 type="text"
                 placeholder="Date"
                 value={date}
-                onClick={toggleDatePicker} // Open the date picker when clicked
+                onClick={toggleDatePicker}
+                readOnly
                 className="w-full bg-transparent text-gray-500 font-semibold focus:outline-none pr-6 cursor-pointer"
               />
               <ChevronDownIcon
                 className="w-5 h-5 text-gray-400 absolute right-0 top-1/2 transform -translate-y-1/2 cursor-pointer"
-                onClick={toggleDatePicker} // Open the date picker when ChevronDownIcon is clicked
+                onClick={toggleDatePicker}
               />
-
-              {/* Conditionally render the date picker */}
               {showDatePicker && (
                 <input
                   type="date"
                   value={date}
-                  onChange={handleDateChange} // Update date on change
-                  className="absolute top-full mt-2 left-0 w-full bg-white shadow-lg rounded-lg"
+                  onChange={handleDateChange}
+                  className="absolute top-full mt-2 left-0 w-full bg-white shadow-lg rounded-lg text-gray-800"
                 />
               )}
             </div>
@@ -73,13 +73,15 @@ const HeroSection = () => {
               <input
                 type="number"
                 placeholder="People"
+                value={people}
+                onChange={(e) => setPeople(e.target.value)}
                 className="w-full bg-transparent text-gray-500 font-semibold focus:outline-none pr-6"
               />
               <ChevronDownIcon className="w-5 h-5 text-gray-400 absolute right-0 top-1/2 transform -translate-y-1/2" />
             </div>
 
             {/* Button */}
-            <button className="bg-black text-white font-semibold px-6 py-2 rounded-full hover:bg-gray-900 transition">
+            <button className="bg-black text-white font-semibold px-4 py-1.5 md:px-6 md:py-2 text-sm md:text-base cursor-pointer rounded-full hover:bg-yellow-600 transition">
               Explore now
             </button>
           </div>
